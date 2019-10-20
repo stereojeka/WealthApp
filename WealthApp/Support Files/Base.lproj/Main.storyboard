@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="A3B-uo-aBm">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Wealth Tab Bar View Controller-->
+        <scene sceneID="DDQ-qa-fAp">
+            <objects>
+                <tabBarController id="A3B-uo-aBm" customClass="WealthTabBarViewController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yBT-Qb-65G">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5ha-4n-PaF" kind="relationship" relationship="viewControllers" id="91q-Gs-yHC"/>
+                        <segue destination="u7q-mo-8KG" kind="relationship" relationship="viewControllers" id="Hg1-Wi-tMw"/>
+                        <segue destination="eDr-Wy-7Ys" kind="relationship" relationship="viewControllers" id="YuC-iF-0Fw"/>
+                        <segue destination="Aw9-Gf-jLp" kind="relationship" relationship="viewControllers" id="XI8-b7-JOn"/>
+                        <segue destination="ent-NS-wKP" kind="relationship" relationship="viewControllers" id="lIp-7o-d64"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yAC-H7-cVq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="218" y="-38"/>
+        </scene>
+        <!--Dashboard-->
+        <scene sceneID="9xF-7j-lN1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5ha-4n-PaF" customClass="DashboardNavigationController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Dashboard" image="dashboard" id="9xH-ik-ds2"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xtW-Oj-98a">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="lipstick"/>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                            <color key="textColor" name="greyishBrownTwo"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nYe-5u-eVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1765" y="-362"/>
+        </scene>
+        <!--Inbox-->
+        <scene sceneID="SSd-bY-4pI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u7q-mo-8KG" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Inbox" image="inbox" id="k8A-rw-IHT"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EFU-Z8-pyj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Os2-c8-o6z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="335"/>
+        </scene>
+        <!--Reporting-->
+        <scene sceneID="oKW-Us-pVd">
+            <objects>
+                <viewController id="eDr-Wy-7Ys" customClass="UnderConstructionViewController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EYp-Fi-lJZ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="8qa-Ws-ocX"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Reporting" image="reporting" id="wCE-5j-5Oz"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y9b-jY-IyV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="217" y="846"/>
+        </scene>
+        <!--More-->
+        <scene sceneID="fJF-Qk-t8M">
+            <objects>
+                <viewController id="ent-NS-wKP" customClass="UnderConstructionViewController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L7E-1P-vek">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Var-nK-P2a"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="More" image="more" id="d34-2F-KYA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="067-ID-Fn2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="972" y="846"/>
+        </scene>
+        <!--e-Docs-->
+        <scene sceneID="jL8-Rr-2jQ">
+            <objects>
+                <viewController id="Aw9-Gf-jLp" customClass="UnderConstructionViewController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="G4c-6S-JMl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="ppY-rY-VCN"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="e-Docs" image="e-docs" id="Ykf-Pi-ABy"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yPe-XG-Gbe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-557" y="846"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="dashboard" width="23" height="19"/>
+        <image name="e-docs" width="17" height="22"/>
+        <image name="inbox" width="25" height="21"/>
+        <image name="more" width="22" height="19"/>
+        <image name="reporting" width="21" height="21"/>
+        <namedColor name="greyishBrownTwo">
+            <color red="0.28999999165534973" green="0.28999999165534973" blue="0.28999999165534973" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="lipstick">
+            <color red="0.76099997758865356" green="0.125" blue="0.49399998784065247" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
