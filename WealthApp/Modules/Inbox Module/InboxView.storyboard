@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Inbox View Controller-->
+        <scene sceneID="YhU-L8-cno">
+            <objects>
+                <viewController storyboardIdentifier="InboxViewController" id="tAe-7h-lKs" customClass="InboxViewController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Y2p-mP-KDU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Search" translatesAutoresizingMaskIntoConstraints="NO" id="paY-p3-SCj">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <color key="barTintColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BH8-7n-KwZ">
+                                <rect key="frame" x="0.0" y="100" width="414" height="762"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.93333333333333335" green="0.93333333333333335" blue="0.93333333333333335" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="BH8-7n-KwZ" firstAttribute="leading" secondItem="Js8-2M-RHv" secondAttribute="leading" id="1UM-XX-UgH"/>
+                            <constraint firstItem="Js8-2M-RHv" firstAttribute="bottom" secondItem="BH8-7n-KwZ" secondAttribute="bottom" id="1ck-cF-opr"/>
+                            <constraint firstItem="Js8-2M-RHv" firstAttribute="trailing" secondItem="BH8-7n-KwZ" secondAttribute="trailing" id="8oC-b9-0wx"/>
+                            <constraint firstItem="paY-p3-SCj" firstAttribute="leading" secondItem="Js8-2M-RHv" secondAttribute="leading" id="CjB-8x-WM5"/>
+                            <constraint firstItem="paY-p3-SCj" firstAttribute="top" secondItem="Js8-2M-RHv" secondAttribute="top" id="HiC-dr-8Is"/>
+                            <constraint firstItem="paY-p3-SCj" firstAttribute="trailing" secondItem="Js8-2M-RHv" secondAttribute="trailing" id="X4K-YX-SeU"/>
+                            <constraint firstItem="BH8-7n-KwZ" firstAttribute="top" secondItem="paY-p3-SCj" secondAttribute="bottom" id="bHQ-8C-5Ss"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Js8-2M-RHv"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="paY-p3-SCj" id="Xiy-QF-z1q"/>
+                        <outlet property="tableView" destination="BH8-7n-KwZ" id="e9N-Fu-gFD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="33h-uW-tZy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-100" y="78"/>
+        </scene>
+    </scenes>
+</document>

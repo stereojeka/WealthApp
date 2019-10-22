@@ -32,6 +32,12 @@
 		F5631960235CA9F80009782F /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F563195F235CA9F80009782F /* UnderConstructionViewController.swift */; };
 		F584973F235F05B1002302A7 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F584973E235F05B1002302A7 /* DateValueFormatter.swift */; };
 		F5849741235F0830002302A7 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5849740235F0830002302A7 /* LargeValueFormatter.swift */; };
+		F5849746235F44D2002302A7 /* InboxView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5849745235F44D2002302A7 /* InboxView.storyboard */; };
+		F5849748235F44E7002302A7 /* InboxViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5849747235F44E7002302A7 /* InboxViewController.swift */; };
+		F584974A235F44F2002302A7 /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5849749235F44F2002302A7 /* InboxViewModel.swift */; };
+		F584974C235F46C3002302A7 /* InboxNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F584974B235F46C3002302A7 /* InboxNavigationController.swift */; };
+		F5849750235F5143002302A7 /* MessageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F584974E235F5143002302A7 /* MessageTableViewCell.swift */; };
+		F5849751235F5143002302A7 /* MessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F584974F235F5143002302A7 /* MessageTableViewCell.xib */; };
 		F58B5672235B411D002BE6FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B5671235B411D002BE6FF /* AppDelegate.swift */; };
 		F58B5679235B411D002BE6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58B5677235B411D002BE6FF /* Main.storyboard */; };
 		F58B567B235B411E002BE6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58B567A235B411E002BE6FF /* Assets.xcassets */; };
@@ -70,6 +76,12 @@
 		F563195F235CA9F80009782F /* UnderConstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionViewController.swift; sourceTree = "<group>"; };
 		F584973E235F05B1002302A7 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
 		F5849740235F0830002302A7 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
+		F5849745235F44D2002302A7 /* InboxView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = InboxView.storyboard; sourceTree = "<group>"; };
+		F5849747235F44E7002302A7 /* InboxViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewController.swift; sourceTree = "<group>"; };
+		F5849749235F44F2002302A7 /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
+		F584974B235F46C3002302A7 /* InboxNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxNavigationController.swift; sourceTree = "<group>"; };
+		F584974E235F5143002302A7 /* MessageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewCell.swift; sourceTree = "<group>"; };
+		F584974F235F5143002302A7 /* MessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MessageTableViewCell.xib; sourceTree = "<group>"; };
 		F58B566E235B411D002BE6FF /* WealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58B5671235B411D002BE6FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F58B5678235B411D002BE6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -154,13 +166,14 @@
 		F519B985235C6BE900C835B0 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				F519B996235C8E4B00C835B0 /* OptionsSelectModule */,
-				F519B986235C6BEF00C835B0 /* DashboardModule */,
+				F519B986235C6BEF00C835B0 /* Dashboard Module */,
+				F5849744235F44A9002302A7 /* Inbox Module */,
+				F519B996235C8E4B00C835B0 /* OptionsSelect Module */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
 		};
-		F519B986235C6BEF00C835B0 /* DashboardModule */ = {
+		F519B986235C6BEF00C835B0 /* Dashboard Module */ = {
 			isa = PBXGroup;
 			children = (
 				F519B990235C6EE100C835B0 /* DashboardView.storyboard */,
@@ -168,7 +181,7 @@
 				F519B989235C6C1F00C835B0 /* DashboardViewModel.swift */,
 				F519B9A2235C93AE00C835B0 /* ChartDateRangeEnum.swift */,
 			);
-			path = DashboardModule;
+			path = "Dashboard Module";
 			sourceTree = "<group>";
 		};
 		F519B98B235C6E0A00C835B0 /* Custom Inits */ = {
@@ -180,7 +193,7 @@
 			path = "Custom Inits";
 			sourceTree = "<group>";
 		};
-		F519B996235C8E4B00C835B0 /* OptionsSelectModule */ = {
+		F519B996235C8E4B00C835B0 /* OptionsSelect Module */ = {
 			isa = PBXGroup;
 			children = (
 				F519B99B235C8F9B00C835B0 /* OptionCell */,
@@ -188,7 +201,7 @@
 				F519B999235C8E7000C835B0 /* OptionsSelectViewController.swift */,
 				F519B9A0235C935800C835B0 /* OptionProtocol + Route.swift */,
 			);
-			path = OptionsSelectModule;
+			path = "OptionsSelect Module";
 			sourceTree = "<group>";
 		};
 		F519B99B235C8F9B00C835B0 /* OptionCell */ = {
@@ -206,6 +219,7 @@
 				F519B98B235C6E0A00C835B0 /* Custom Inits */,
 				F5601320235C5A7B004B540B /* WealthTabBarViewController.swift */,
 				F519B994235C702300C835B0 /* DashboardNavigationController.swift */,
+				F584974B235F46C3002302A7 /* InboxNavigationController.swift */,
 				F563195F235CA9F80009782F /* UnderConstructionViewController.swift */,
 			);
 			path = Common;
@@ -218,6 +232,26 @@
 				F584973E235F05B1002302A7 /* DateValueFormatter.swift */,
 			);
 			path = "Data Formatters";
+			sourceTree = "<group>";
+		};
+		F5849744235F44A9002302A7 /* Inbox Module */ = {
+			isa = PBXGroup;
+			children = (
+				F584974D235F5124002302A7 /* Cell */,
+				F5849745235F44D2002302A7 /* InboxView.storyboard */,
+				F5849747235F44E7002302A7 /* InboxViewController.swift */,
+				F5849749235F44F2002302A7 /* InboxViewModel.swift */,
+			);
+			path = "Inbox Module";
+			sourceTree = "<group>";
+		};
+		F584974D235F5124002302A7 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				F584974E235F5143002302A7 /* MessageTableViewCell.swift */,
+				F584974F235F5143002302A7 /* MessageTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		F58B5665235B411D002BE6FF = {
@@ -337,8 +371,10 @@
 				F58B567E235B411E002BE6FF /* LaunchScreen.storyboard in Resources */,
 				F519B99F235C8FB400C835B0 /* OptionTableViewCell.xib in Resources */,
 				F519B998235C8E5D00C835B0 /* OptionsSelectView.storyboard in Resources */,
+				F5849751235F5143002302A7 /* MessageTableViewCell.xib in Resources */,
 				F519B975235C5F9600C835B0 /* ngpo.json in Resources */,
 				F58B567B235B411E002BE6FF /* Assets.xcassets in Resources */,
+				F5849746235F44D2002302A7 /* InboxView.storyboard in Resources */,
 				F58B5679235B411D002BE6FF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,11 +432,14 @@
 				F519B988235C6C0A00C835B0 /* DashboardViewController.swift in Sources */,
 				F584973F235F05B1002302A7 /* DateValueFormatter.swift in Sources */,
 				F5601321235C5A7B004B540B /* WealthTabBarViewController.swift in Sources */,
+				F5849750235F5143002302A7 /* MessageTableViewCell.swift in Sources */,
 				F58B5697235B5BC1002BE6FF /* UIColor+Additions.swift in Sources */,
 				F519B978235C605000C835B0 /* AssetValuation.swift in Sources */,
 				F5849741235F0830002302A7 /* LargeValueFormatter.swift in Sources */,
+				F5849748235F44E7002302A7 /* InboxViewController.swift in Sources */,
 				F519B995235C702300C835B0 /* DashboardNavigationController.swift in Sources */,
 				F519B973235C5F1E00C835B0 /* Message.swift in Sources */,
+				F584974C235F46C3002302A7 /* InboxNavigationController.swift in Sources */,
 				F519B98A235C6C1F00C835B0 /* DashboardViewModel.swift in Sources */,
 				F519B97E235C61DB00C835B0 /* AssetCategory.swift in Sources */,
 				F519B984235C6AB800C835B0 /* SwinjectStoryboard+DI.swift in Sources */,
@@ -415,6 +454,7 @@
 				F5631960235CA9F80009782F /* UnderConstructionViewController.swift in Sources */,
 				F519B97C235C614200C835B0 /* Client.swift in Sources */,
 				F58B5691235B4C44002BE6FF /* Extensions.swift in Sources */,
+				F584974A235F44F2002302A7 /* InboxViewModel.swift in Sources */,
 				F519B9A1235C935800C835B0 /* OptionProtocol + Route.swift in Sources */,
 				F519B99E235C8FB400C835B0 /* OptionTableViewCell.swift in Sources */,
 			);

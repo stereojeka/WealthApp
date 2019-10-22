@@ -20,8 +20,16 @@ extension SwinjectStoryboard {
             DashboardViewModel(provider: resolver.resolve(DataProvider.self)!)
         }
         
+        defaultContainer.register(InboxViewModel.self) { resolver in
+            InboxViewModel(provider: resolver.resolve(DataProvider.self)!)
+        }
+        
         defaultContainer.storyboardInitCompleted(DashboardViewController.self) { (resolver, controller) in
             controller.viewModel = resolver.resolve(DashboardViewModel.self)!
+        }
+        
+        defaultContainer.storyboardInitCompleted(InboxViewController.self) { (resolver, controller) in
+            controller.viewModel = resolver.resolve(InboxViewModel.self)!
         }
     }
 }

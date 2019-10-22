@@ -53,12 +53,13 @@
         <!--Inbox-->
         <scene sceneID="SSd-bY-4pI">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u7q-mo-8KG" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="u7q-mo-8KG" customClass="InboxNavigationController" customModule="WealthApp" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Inbox" image="inbox" id="k8A-rw-IHT"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="EFU-Z8-pyj">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" name="lipstick"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                 </navigationController>
