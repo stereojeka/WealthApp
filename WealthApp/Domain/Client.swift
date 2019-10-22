@@ -27,4 +27,25 @@ struct Client: Codable {
             return result + asset.lastAssetIncome
         }
     }
+    
+    var assetsWithinStructure: Double {
+        getAssetsIncome(by: .ASSETS_WITHIN_STRUCTURE)
+    }
+    
+    var assetsExternalToStructure: Double {
+        getAssetsIncome(by: .ASSETS_OUTSIDE_STRUCTURE)
+    }
+    
+    var assetsFixedIncome: Double {
+        getAssetsIncome(by: .FIXED_INCOME_ASSETS)
+    }
+    
+    private func getAssetsIncome(by category: AssetCategory) -> Double {
+        return assets.reduce(0.0) { result, asset -> Double in
+            if asset.category == category {
+                return result + asset.lastAssetIncome
+            }
+            return result
+        }
+    }
 }

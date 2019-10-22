@@ -26,4 +26,11 @@ struct Asset: Codable {
 
         return currentValuationInCurrency - previousValuationInCurrency
     }
+    
+    var orderedValuations: [Date: Double] {
+        let dict = Dictionary(grouping: historicalValuations, by: { $0.date })
+        return dict.mapValues { array in
+            return array[0].valuationInCurrency
+        }
+    }
 }

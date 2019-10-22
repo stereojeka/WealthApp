@@ -13,4 +13,8 @@ struct AssetValuation: Codable {
     let valuationDate: String
     let valuationInGBP: Double
     let valuationInCurrency: Double
+    
+    var date: Date {
+        return valuationDate.iso8601 ?? Date()
+    }
 }

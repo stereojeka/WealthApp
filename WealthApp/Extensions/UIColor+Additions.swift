@@ -113,4 +113,8 @@ extension UIColor {
     @nonobjc class var darkCoral: UIColor {
       return UIColor(red: 211.0 / 255.0, green: 79.0 / 255.0, blue: 65.0 / 255.0, alpha: 1.0)
     }
+    
+    @nonobjc class var darkishPinkTwo: UIColor {
+      return UIColor(red: 225.0 / 255.0, green: 53.0 / 255.0, blue: 147.0 / 255.0, alpha: 1.0)
+    }
 }

@@ -30,6 +30,8 @@
 		F519B9A3235C93AE00C835B0 /* ChartDateRangeEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = F519B9A2235C93AE00C835B0 /* ChartDateRangeEnum.swift */; };
 		F5601321235C5A7B004B540B /* WealthTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5601320235C5A7B004B540B /* WealthTabBarViewController.swift */; };
 		F5631960235CA9F80009782F /* UnderConstructionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F563195F235CA9F80009782F /* UnderConstructionViewController.swift */; };
+		F584973F235F05B1002302A7 /* DateValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F584973E235F05B1002302A7 /* DateValueFormatter.swift */; };
+		F5849741235F0830002302A7 /* LargeValueFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5849740235F0830002302A7 /* LargeValueFormatter.swift */; };
 		F58B5672235B411D002BE6FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B5671235B411D002BE6FF /* AppDelegate.swift */; };
 		F58B5679235B411D002BE6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F58B5677235B411D002BE6FF /* Main.storyboard */; };
 		F58B567B235B411E002BE6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58B567A235B411E002BE6FF /* Assets.xcassets */; };
@@ -37,6 +39,7 @@
 		F58B5691235B4C44002BE6FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B5690235B4C44002BE6FF /* Extensions.swift */; };
 		F58B5697235B5BC1002BE6FF /* UIColor+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B5696235B5BC1002BE6FF /* UIColor+Additions.swift */; };
 		F58B56BB235B61C7002BE6FF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58B56BA235B61C7002BE6FF /* SceneDelegate.swift */; };
+		F5D1AB1D235DD35F0062B199 /* ChartDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D1AB1C235DD35F0062B199 /* ChartDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +68,8 @@
 		F519B9A2235C93AE00C835B0 /* ChartDateRangeEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDateRangeEnum.swift; sourceTree = "<group>"; };
 		F5601320235C5A7B004B540B /* WealthTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WealthTabBarViewController.swift; sourceTree = "<group>"; };
 		F563195F235CA9F80009782F /* UnderConstructionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnderConstructionViewController.swift; sourceTree = "<group>"; };
+		F584973E235F05B1002302A7 /* DateValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateValueFormatter.swift; sourceTree = "<group>"; };
+		F5849740235F0830002302A7 /* LargeValueFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeValueFormatter.swift; sourceTree = "<group>"; };
 		F58B566E235B411D002BE6FF /* WealthApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WealthApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F58B5671235B411D002BE6FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F58B5678235B411D002BE6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +79,7 @@
 		F58B5690235B4C44002BE6FF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		F58B5696235B5BC1002BE6FF /* UIColor+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Additions.swift"; sourceTree = "<group>"; };
 		F58B56BA235B61C7002BE6FF /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F5D1AB1C235DD35F0062B199 /* ChartDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,7 +126,9 @@
 		F519B976235C5F9B00C835B0 /* DataProvider */ = {
 			isa = PBXGroup;
 			children = (
+				F5849743235F2729002302A7 /* Data Formatters */,
 				F519B97F235C647100C835B0 /* DataProvider.swift */,
+				F5D1AB1C235DD35F0062B199 /* ChartDataProvider.swift */,
 				F519B974235C5F9600C835B0 /* ngpo.json */,
 			);
 			path = DataProvider;
@@ -201,6 +209,15 @@
 				F563195F235CA9F80009782F /* UnderConstructionViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		F5849743235F2729002302A7 /* Data Formatters */ = {
+			isa = PBXGroup;
+			children = (
+				F5849740235F0830002302A7 /* LargeValueFormatter.swift */,
+				F584973E235F05B1002302A7 /* DateValueFormatter.swift */,
+			);
+			path = "Data Formatters";
 			sourceTree = "<group>";
 		};
 		F58B5665235B411D002BE6FF = {
@@ -377,9 +394,11 @@
 			files = (
 				F519B97A235C60BA00C835B0 /* Asset.swift in Sources */,
 				F519B988235C6C0A00C835B0 /* DashboardViewController.swift in Sources */,
+				F584973F235F05B1002302A7 /* DateValueFormatter.swift in Sources */,
 				F5601321235C5A7B004B540B /* WealthTabBarViewController.swift in Sources */,
 				F58B5697235B5BC1002BE6FF /* UIColor+Additions.swift in Sources */,
 				F519B978235C605000C835B0 /* AssetValuation.swift in Sources */,
+				F5849741235F0830002302A7 /* LargeValueFormatter.swift in Sources */,
 				F519B995235C702300C835B0 /* DashboardNavigationController.swift in Sources */,
 				F519B973235C5F1E00C835B0 /* Message.swift in Sources */,
 				F519B98A235C6C1F00C835B0 /* DashboardViewModel.swift in Sources */,
@@ -389,6 +408,7 @@
 				F519B980235C647100C835B0 /* DataProvider.swift in Sources */,
 				F58B5672235B411D002BE6FF /* AppDelegate.swift in Sources */,
 				F519B98D235C6E1B00C835B0 /* StoryboardInitializable.swift in Sources */,
+				F5D1AB1D235DD35F0062B199 /* ChartDataProvider.swift in Sources */,
 				F519B9A3235C93AE00C835B0 /* ChartDateRangeEnum.swift in Sources */,
 				F58B56BB235B61C7002BE6FF /* SceneDelegate.swift in Sources */,
 				F519B99A235C8E7000C835B0 /* OptionsSelectViewController.swift in Sources */,
