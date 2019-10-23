@@ -13,14 +13,27 @@ class InboxViewModel {
     
     let provider: DataProvider
     
-    let dataSource = BehaviorRelay<[Message]>(value: [])
+    let messages = BehaviorRelay<[Message]>(value: [])
+    
+    let shownMessages = BehaviorRelay<[Message]>(value: [])
     
     init(provider: DataProvider) {
         self.provider = provider
     }
     
     func onViewReady() {
-        dataSource.accept(provider.client?.inboxMessages ?? [])
+        let messages = provider.client?.inboxMessages.sorted(by: { (first, second) -> Bool in
+            if !first.isRead && !second.isRead {
+                return first.importanceLevel > second.importanceLevel
+            } else if first.isRead {
+                return false
+            } else {
+                return true
+            }
+        })
+        
+        self.messages.accept(messages ?? [])
+        self.shownMessages.accept(messages ?? [])
     }
     
 }

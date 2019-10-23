@@ -35,6 +35,7 @@ class InboxViewController: UIViewController, StoryboardInitializable {
     private func setupUI() {
         setupNavigationBar()
         setupTable()
+        hideKeyboardWhenTappedAround()
     }
     
     private func setupNavigationBar() {
@@ -56,9 +57,27 @@ class InboxViewController: UIViewController, StoryboardInitializable {
     
     private func binding() {
         
-        viewModel.dataSource.bind(to: tableView.rx.items(cellIdentifier: MessageTableViewCell.identifier, cellType: MessageTableViewCell.self)) { _, model, cell in
+        viewModel.shownMessages.bind(to: tableView.rx.items(cellIdentifier: MessageTableViewCell.identifier, cellType: MessageTableViewCell.self)) { _, model, cell in
             cell.bind(model: model)
         }.disposed(by: disposeBag)
+        
+        searchBar
+            .rx
+            .text
+            .orEmpty
+            .debounce(.milliseconds(300), scheduler: MainScheduler.instance)
+            .distinctUntilChanged()
+            .subscribe(onNext: { [weak self] query in
+                guard let self = self else { return }
+                if query.isEmpty {
+                    self.viewModel.shownMessages.accept(self.viewModel.messages.value)
+                } else {
+                    let filteredMessages = self.viewModel.messages.value.filter {
+                        $0.subject.lowercased().hasPrefix(query.lowercased()) || $0.description.lowercased().hasPrefix(query.lowercased())
+                    }
+                    self.viewModel.shownMessages.accept(filteredMessages)
+                }
+            }).disposed(by: disposeBag)
         
         viewModel.onViewReady()
     }

@@ -21,14 +21,15 @@ class MessageTableViewCell: UITableViewCell, CellInizializable {
         super.awakeFromNib()
         self.avatarView.layer.cornerRadius = self.avatarView.bounds.width / 2
         self.avatarView.layer.masksToBounds = true
+        self.newMarkButton.layer.cornerRadius = 2.0
+        self.newMarkButton.layer.masksToBounds = true
     }
     
     func bind(model: Message) {
         newMarkButton.isHidden = model.isRead
         fromNameLabel.text = model.fromName
-        messageDateLabel.text = model.messageDate
+        messageDateLabel.text = model.messageDate.iso8601?.string(with: "d MMM, h:mm a")
         messageTitleLabel.text = model.subject
         messageDescrioption.text = model.description
     }
-    
 }
